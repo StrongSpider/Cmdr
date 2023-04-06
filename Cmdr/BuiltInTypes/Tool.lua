@@ -25,8 +25,4 @@ local toolType = {
 
 return function (cmdr)
 	cmdr:RegisterType("tool", toolType)
-<<<<<<< HEAD
 end
-=======
-end
->>>>>>> 5d62f45237bd1fa67627c9b398389f67b39ac768
