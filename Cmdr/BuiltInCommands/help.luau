@@ -45,10 +45,10 @@ return {
 			for _, command in ipairs(commands) do
 				command.Group = command.Group or "No Group"
 				if lastGroup ~= command.Group then
-					context:Reply(`\n{command.Group}\n-------------------`)
+					context:Reply(`\n{command.Group}\n{string.rep("-", #command.Group)}`)
 					lastGroup = command.Group
 				end
-				context:Reply(`{command.Name} - {command.Description}`)
+				context:Reply(if command.Description then `{command.Name} - {command.Description}` else command.Name)
 			end
 		end
 		return ""
